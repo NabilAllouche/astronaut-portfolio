@@ -1,6 +1,18 @@
 import meter1 from "../assets/img/meter1.svg";
 import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
+import nodejs from "../assets/img/nodejs-logo.png";
+import react from "../assets/img/React-icon.svg.png";
+import express from "../assets/img/express-logo.png";
+import mongodb from "../assets/img/mongodb-logo.png";
+import redux from "../assets/img/redux-logo1.png";
+import javascript from "../assets/img/JavaScript-logo.png";
+import typescript from "../assets/img/Typescript-logo.png";
+import java from "../assets/img/java.png";
+import spring from "../assets/img/spring-logo.svg";
+import angular from "../assets/img/Angular-logo.png";
+import git from "../assets/img/Git-logo.png";
+
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import arrow1 from "../assets/img/arrow1.svg";
@@ -12,11 +24,11 @@ export const Skills = () => {
     superLargeDesktop: {
       // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 6,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 6,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -36,9 +48,9 @@ export const Skills = () => {
             <div className="skill-bx wow zoomIn">
               <h2>Skills</h2>
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry.<br></br> Lorem Ipsum has been the industry's standard
-                dummy text.
+                Proficient in the MERN stack and with basic knowledge in
+                Java/Angular, <br></br>I offer a varied skill set that supports
+                smooth development and collaboration.
               </p>
               <Carousel
                 responsive={responsive}
@@ -46,20 +58,50 @@ export const Skills = () => {
                 className="owl-carousel owl-theme skill-slider"
               >
                 <div className="item">
-                  <img src={meter1} alt="Image" />
-                  <h5>Web Development</h5>
+                  <img src={javascript} alt="Image" />
+                  <h5>JavaScript</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt="Image" />
-                  <h5>Brand Identity</h5>
+                  <img src={typescript} alt="Image" />
+                  <h5>Typescript</h5>
                 </div>
                 <div className="item">
-                  <img src={meter3} alt="Image" />
-                  <h5>Logo Design</h5>
+                  <img src={mongodb} alt="Image" />
+                  <h5>MongoDb</h5>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt="Image" />
-                  <h5>Web Development</h5>
+                  <img src={express} alt="Image" />
+                  <h5>Express Js</h5>
+                </div>
+                <div className="item">
+                  <img src={react} alt="testing" />
+                  <h5>React js</h5>
+                </div>
+                <div className="item">
+                  <img src={nodejs} alt="testing" />
+                  <h5>Node js</h5>
+                </div>
+
+                <div className="item">
+                  <img src={redux} alt="Image" />
+                  <h5>Redux</h5>
+                </div>
+                <div className="item">
+                  <img src={java} alt="Image" />
+                  <h5>Java</h5>
+                </div>
+                <div className="item">
+                  <img src={spring} alt="Image" />
+                  <h5>Spring Boot</h5>
+                </div>
+
+                <div className="item">
+                  <img src={angular} alt="Image" />
+                  <h5>Angular</h5>
+                </div>
+                <div className="item">
+                  <img src={git} alt="Image" />
+                  <h5>Git</h5>
                 </div>
               </Carousel>
             </div>
