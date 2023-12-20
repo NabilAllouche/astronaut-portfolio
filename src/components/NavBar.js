@@ -32,9 +32,12 @@ export const NavBar = () => {
   return (
     <Router>
       <Navbar expand="lg" className={scrolled ? "scrolled" : ""}>
-        <Container className={scrolled ? " navbarContainer " : ""}>
+        <Container
+          className={scrolled ? " navbarContainer " : "navbarContainer1"}
+        >
           <Navbar.Brand href="/">
-            <img src={logo} alt="Logo" />
+            {/* <img src={logo} alt="Logo" /> */}
+            <span className="logo">Nabil.dev</span>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -73,7 +76,7 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <HashLink to="#connect">
-                <button className="vvd">
+                <button className="">
                   <span>Let’s Connect</span>
                 </button>
               </HashLink>

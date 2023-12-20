@@ -1,30 +1,46 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import Maintenance from "../assets/img/Maintenance-bro.svg";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import logout from "../assets/img/projects/Logout.png";
+import DarkMode from "../assets/img/projects/DarkMode.png";
+import products from "../assets/img/projects/ManageProducts.png";
+import dashbord from "../assets/img/projects/dashbord.png";
+import orders from "../assets/img/projects/orders.png";
+import userProfil from "../assets/img/projects/userProfil.png";
+import newUser from "../assets/img/projects/createNewUser.png";
+import home from "../assets/img/projects/Home.png";
+import grid from "../assets/img/projects/grid.png";
+import shop from "../assets/img/projects/shop.png";
+import registre from "../assets/img/projects/registre.png";
+import featured from "../assets/img/projects/featured1.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
+import { AwardFill, ArrowUpRightCircleFill } from "react-bootstrap-icons";
+
+import "react-multi-carousel/lib/styles.css";
+import Carousel from "react-bootstrap/Carousel";
 
 export const Projects = () => {
-  const projects = [
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 1,
     },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 1,
     },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 1,
     },
-  ];
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
 
   return (
     <section className="project" id="projects">
@@ -35,21 +51,15 @@ export const Projects = () => {
               {({ isVisible }) => (
                 <div>
                   <h2>Projects</h2>
-                  <p>
-                    Lorem Ipsum is simply dummy text of the printing and
-                    typesetting industry. Lorem Ipsum has been the industry's
-                    standard dummy text ever since the 1500s, when an unknown
-                    printer took a galley of type and scrambled it to make a
-                    type specimen book.
-                  </p>
+
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
                     <Nav
-                      variant="pills"
-                      className="nav-pills mb-5 justify-content-center align-items-center"
+                      variant="tabs"
+                      className="w-100 nav-pills mb-5 justify-content-center align-items-center flex-column flex-md-row"
                       id="pills-tab"
                     >
-                      <Nav.Item className="pe-auto">
-                        <Nav.Link eventKey="first" className="pe-auto">
+                      <Nav.Item className="nav-item">
+                        <Nav.Link eventKey="first" className="">
                           E-commerce Store
                         </Nav.Link>
                       </Nav.Item>
@@ -62,36 +72,167 @@ export const Projects = () => {
                         <Nav.Link eventKey="third">Blog App</Nav.Link>
                       </Nav.Item>
                     </Nav>
-                    <Tab.Content
-                      id="slideInUp"
-                      className={
-                        isVisible ? "animate__animated animate__slideInUp" : ""
-                      }
-                    >
+                    <Tab.Content id="slideInUp">
                       <Tab.Pane eventKey="first">
-                        <Row>
-                          {projects.map((project, index) => {
-                            return <ProjectCard key={index} {...project} />;
-                          })}
-                        </Row>
+                        <div className="container">
+                          <div className="row">
+                            <div className="col-md-7">
+                              <Carousel className="carousel-projects">
+                                <Carousel.Item>
+                                  <img
+                                    src={featured}
+                                    className="carousel-img"
+                                  />
+                                  <Carousel.Caption></Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <img
+                                    src={registre}
+                                    className="carousel-img"
+                                  />
+                                  <Carousel.Caption></Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <img src={shop} className="carousel-img" />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <img src={grid} className="carousel-img" />
+                                  <Carousel.Caption></Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <img src={home} className="carousel-img" />
+                                  <Carousel.Caption></Carousel.Caption>
+                                </Carousel.Item>
+                              </Carousel>
+                            </div>
+                            <div className="col-md-5 d-flex flex-column gap-3">
+                              <div className="d-flex justify-content-between">
+                                <h4>Fonctionnalities : </h4>
+
+                                <a href="#" className="project-link">
+                                  {" "}
+                                  Live Demo <ArrowUpRightCircleFill />
+                                </a>
+                              </div>
+                              <span>
+                                <AwardFill color="#168bf7" /> Secure Customer
+                                Authentication
+                              </span>
+                              <span>
+                                <AwardFill color="#168bf7" /> Browse products,
+                                filtre and search for products , check out the
+                                order , shoping cart and wish list
+                              </span>
+                              <span>
+                                <AwardFill color="#168bf7" /> Customer Profile
+                                Management
+                              </span>
+                              <span>
+                                <AwardFill color="#168bf7" /> Technologies Used
+                                : <br /> React , Node, ExpressJs , MongoDb ,
+                                Shadcn/ui
+                              </span>
+                            </div>
+                          </div>
+                        </div>
                       </Tab.Pane>
-                      <Tab.Pane eventKey="section">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
+
+                      <Tab.Pane eventKey="second">
+                        <div className="container">
+                          <div className="row">
+                            <div className="col-md-7">
+                              <Carousel className="carousel-projects">
+                                <Carousel.Item>
+                                  <img src={logout} className="carousel-img" />
+                                  <Carousel.Caption></Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <img
+                                    src={dashbord}
+                                    className="carousel-img"
+                                  />
+                                  <Carousel.Caption></Carousel.Caption>
+                                </Carousel.Item>
+
+                                <Carousel.Item>
+                                  <img
+                                    src={products}
+                                    className="carousel-img"
+                                  />
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <img
+                                    src={DarkMode}
+                                    className="carousel-img"
+                                  />
+                                  <Carousel.Caption></Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <img src={newUser} className="carousel-img" />
+                                  <Carousel.Caption></Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <img
+                                    src={userProfil}
+                                    className="carousel-img"
+                                  />
+                                  <Carousel.Caption></Carousel.Caption>
+                                </Carousel.Item>
+                                <Carousel.Item>
+                                  <img src={orders} className="carousel-img" />
+                                  <Carousel.Caption></Carousel.Caption>
+                                </Carousel.Item>
+                              </Carousel>
+                            </div>
+                            <div className="col-md-5 d-flex flex-column gap-3">
+                              <div className="d-flex justify-content-between">
+                                <h4>Fonctionnalities : </h4>
+
+                                <a href="#" className="project-link">
+                                  {" "}
+                                  Live Demo <ArrowUpRightCircleFill />
+                                </a>
+                              </div>
+                              <span>
+                                <AwardFill color="#168bf7" /> Secure User
+                                Authentication
+                              </span>
+                              <span>
+                                <AwardFill color="#168bf7" /> Product, Order,
+                                Review, Category, User, and Customer Management
+                              </span>
+                              <span>
+                                <AwardFill color="#168bf7" /> User Profile
+                                Management
+                              </span>
+                              <span>
+                                <AwardFill color="#168bf7" /> Dark Mode
+                              </span>
+                              <span>
+                                <AwardFill color="#168bf7" /> Technologies Used
+                                : <br /> React , Node, ExpressJs , MongoDb ,
+                                Shadcn/ui
+                              </span>
+                            </div>
+                          </div>
+                        </div>
                       </Tab.Pane>
+
                       <Tab.Pane eventKey="third">
-                        <p>
-                          Lorem ipsum dolor sit amet consectetur adipisicing
-                          elit. Cumque quam, quod neque provident velit, rem
-                          explicabo excepturi id illo molestiae blanditiis,
-                          eligendi dicta officiis asperiores delectus quasi
-                          inventore debitis quo.
-                        </p>
+                        <div className="container">
+                          <div className="row">
+                            <div className="col-md-6">
+                              <img
+                                src={Maintenance}
+                                className="under-maintenance-img"
+                              />
+                            </div>
+                            <div className="col-md-6 d-flex flex-column justify-content-center align-items-center">
+                              <h1> Under Maintenance</h1>
+                              <h4>Please check back later</h4>
+                            </div>
+                          </div>
+                        </div>
                       </Tab.Pane>
                     </Tab.Content>
                   </Tab.Container>

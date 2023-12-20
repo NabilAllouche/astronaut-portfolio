@@ -1,46 +1,51 @@
 import { useState, useEffect } from "react";
-import { Col, Row, Alert } from "react-bootstrap";
+import { Col, Row, Alert, Button } from "react-bootstrap";
+import { EnvelopeFill, Linkedin, Github } from "react-bootstrap-icons";
+import url from "../assets/nabilAllouche-resume.pdf";
 
 export const Newsletter = ({ status, message, onValidated }) => {
-  const [email, setEmail] = useState('');
+  // Function will execute on click of button
+  const onButtonClick = () => {
+    // using Java Script method to get PDF file
+    fetch(url).then((response) => {
+      response.blob().then((blob) => {
+        // Creating new object of PDF file
+        const fileURL = window.URL.createObjectURL(blob);
 
-  useEffect(() => {
-    if (status === 'success') clearFields();
-  }, [status])
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    email &&
-    email.indexOf("@") > -1 &&
-    onValidated({
-      EMAIL: email
-    })
-  }
-
-  const clearFields = () => {
-    setEmail('');
-  }
+        // Setting various property values
+        let alink = document.createElement("a");
+        alink.href = fileURL;
+        alink.download = "nabil-allouche-resume";
+        alink.click();
+      });
+    });
+  };
 
   return (
-      <Col lg={12}>
-        <div className="newsletter-bx wow slideInUp">
-          <Row>
-            <Col lg={12} md={6} xl={5}>
-              <h3>Subscribe to our Newsletter<br></br> & Never miss latest updates</h3>
-              {status === 'sending' && <Alert>Sending...</Alert>}
-              {status === 'error' && <Alert variant="danger">{message}</Alert>}
-              {status === 'success' && <Alert variant="success">{message}</Alert>}
-            </Col>
-            <Col md={6} xl={7}>
-              <form onSubmit={handleSubmit}>
-                <div className="new-email-bx">
-                  <input value={email} type="email" onChange={(e) => setEmail(e.target.value)} placeholder="Email Address" />
-                  <button type="submit">Submit</button>
-                </div>
-              </form>
-            </Col>
-          </Row>
+    <Col lg={12}>
+      <div className=" newsletter-bx wow slideInUp  ">
+        <h2 className="mb-5 text-center">Contact</h2>
+        <div className="d-flex justify-content-evenly ">
+          <div>
+            <EnvelopeFill size={36} />
+            <span className="email"> nabilallouche49@gmail.com</span>
+          </div>
+          <div>
+            <a href="" _blank>
+              <Github size={36} color="black" />
+            </a>{" "}
+            <a href="" _blank>
+              <Linkedin size={36} />
+            </a>{" "}
+            <Button
+              className="btn btn-outline-dark text-white border-0"
+              onClick={onButtonClick}
+            >
+              Download resume
+            </Button>
+          </div>
         </div>
-      </Col>
-  )
-}
+      </div>
+    </Col>
+  );
+};

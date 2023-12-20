@@ -82,6 +82,13 @@ p.danger {
 	color: red;
 }
 /************ Navbar Css ************/
+
+.logo { 
+  color: #fff;
+  font-size: 30px;
+   font-family: cursive;
+}
+
 nav.navbar {
   padding: 10px 0;
   position: fixed;
@@ -90,14 +97,25 @@ nav.navbar {
   z-index: 9999;
   transition:  0.32s ease-in-out;
 }
-.navbarContainer{
+/* .navbarContainer{
   transition:  0.32s ease-in-out;
-  background-color: #450131 !important;
+  background-color: #6e03cc !important;
   border: 1 solid ;
   border-radius: 15px;
   padding: 1px;
   margin: 10px;
+} */
+
+.navbarContainer{
+  transition:  0.32s ease-in-out;
+background: rgba(255, 255, 255, 0.19);
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(7.7px);
+-webkit-backdrop-filter: blur(3.7px);
+border: 1px solid rgba(255, 255, 255, 0.3);
+margin: 10px;
 }
+
 nav.navbar.scrolled {
   padding: 0px 0;
 
@@ -160,13 +178,14 @@ span.navbar-text {
 }
 .navbar-text button {
   font-weight: 700;
-  color: #fff;
-  border: 1px solid #fff;
-  padding: 18px 34px;
+  color: #000000;
+  border: 1px solid #f8f8f8;
+  border-radius: 5px;
+  padding: 10px;
+  background: #f8f8f8;
   font-size: 18px;
   margin-left: 18px;
 	position: relative;
-	background-color: transparent;
 	transition: 0.3s ease-in-out;
 }
 .navbar-text button span {
@@ -177,7 +196,6 @@ span.navbar-text {
   width: 0%;
   height: 100%;
   position: absolute;
-  background-color: #fff;
   left: 0;
   top: 0;
   z-index: -1;
@@ -185,6 +203,7 @@ span.navbar-text {
 }
 .navbar-text button:hover {
   color: #121212;
+  box-shadow: rgba(221, 221, 221, 0.765) 0px 7px 29px 0px;
 }
 .navbar-text button:hover::before {
 	content: "";
@@ -242,7 +261,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/32k--3dcolorful-space-galaxy-cloud-nebula-stary-night-cosmos-universe-science-astronomy-supern-82895838.png');
+  background-image: url('./assets/img/universe-with-a-blue-and-violet-comet-high-detail-ultra-hd-realistic-vivid-colors-highly-detail-311137229.png');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -351,6 +370,50 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 
 /************ Projects Css ************/
+
+.carousel-projects{
+  width: 100%;
+  border-radius: 20px;
+  border: 1 solid;
+}
+.carousel-projects .carousel-img{
+  border-radius: 10px;
+  border: 1 solid;
+}
+ .project-link{
+ text-decoration: none;
+ font-size: 20px;
+}
+ .project-link:hover{
+ text-decoration: underline;
+}
+
+.under-maintenance-img{
+  width: 80%;
+}
+
+.carousel-projects .slide-label{
+  color: #000;
+  margin: 0;
+  text-align: center;
+  font-size: 20px;
+}
+
+.nav-item{
+  cursor: pointer;
+}
+.skill-slider-projects{
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.skill-slider-projects .item img {
+  width: 60%;
+  margin: 0 auto 15px auto;
+}
 .project {
   padding: 80px 0;
   position: relative;
@@ -373,7 +436,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project .nav.nav-pills {
   width: 72%;
   margin: 0 auto;
-  border-radius: 50px;
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
 }
@@ -399,7 +461,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+    background: linear-gradient(90.21deg, #e1d016 -5.91%, #ff9028 111.58%);
     top: 0;
     left: 0;
     z-index: -1;
@@ -413,15 +475,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .nav-link#projects-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 55px 0px 0px 55px;
 }
 .nav-link#projects-tabs-tab-second {
-  border-top: 1px solid rgba(255, 255, 255, 0.5);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+
 }
 .nav-link#projects-tabs-tab-third {
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 0 55px 55px 0;
 }
 .proj-imgbx {
   position: relative;
@@ -478,7 +538,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 /************ Projects Css ************/
 .contact {
-  background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
+  background: linear-gradient(90.21deg, #0a0909 -5.91%, #7764f8 111.58%);
   padding: 60px 0 200px 0;
 }
 .contact img {
@@ -548,6 +608,12 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
 }
 
+
+.email {
+  color:#000;
+  font-size: 25px;
+}
+
 /************ Footer Css ************/
 .footer {
   padding: 0 0 50px 0;
@@ -560,7 +626,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: #FFFFFF;
   border-radius: 55px;
   color: #121212;
-  padding: 85px 125px;
+  padding: 45px;
   margin-bottom: 80px;
   margin-top: -122px;
 }
