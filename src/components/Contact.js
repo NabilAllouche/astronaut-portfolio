@@ -90,7 +90,7 @@ export const Contact = () => {
                             onFormUpdate("message", e.target.value)
                           }
                         ></textarea>
-                        <button type="submit"></button>
+                        <button type="submit"> send </button>
                       </Col>
                     </Row>
                   </form>
