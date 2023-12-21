@@ -1,5 +1,4 @@
-import { useState, useEffect } from "react";
-import { Col, Row, Alert, Button } from "react-bootstrap";
+import { Col, Button } from "react-bootstrap";
 import { EnvelopeFill, Linkedin, Github } from "react-bootstrap-icons";
 import url from "../assets/nabilAllouche-resume.pdf";
 
@@ -32,12 +31,17 @@ export const Newsletter = ({ status, message, onValidated }) => {
             </a>
           </div>
           <div>
-            <a href="https://github.com/NabilAllouche" target="_blank">
+            <a
+              href="https://github.com/NabilAllouche"
+              target="_blank"
+              rel="noreferrer"
+            >
               <Github size={36} color="black" />
             </a>{" "}
             <a
               href="https://www.linkedin.com/in/nabil-allouche/"
               target="_blank"
+              rel="noreferrer"
             >
               <Linkedin size={36} color="black" />
             </a>{" "}
