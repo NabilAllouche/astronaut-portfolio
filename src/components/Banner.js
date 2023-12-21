@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg1 from "../assets/img/astronaut.png";
 import headerImg from "../assets/img/DZEvrgpvfOwV9E8YAjN9t (1).png";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import "animate.css";
@@ -78,9 +77,11 @@ export const Banner = () => {
                   back-end technologies to create innovative web applications,
                   and I am always ready to tackle new technical challenges.
                 </p>
-                <button onClick={() => console.log("connect")}>
-                  Let’s Connect <ArrowRightCircle size={25} />
-                </button>
+                <a href="#connect" style={{ textDecoration: "none" }}>
+                  <button onClick={() => console.log("connect")}>
+                    Let’s Connect <ArrowRightCircle size={25} />
+                  </button>
+                </a>
               </div>
             </TrackVisibility>
           </Col>

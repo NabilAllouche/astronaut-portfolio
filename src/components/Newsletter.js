@@ -25,20 +25,24 @@ export const Newsletter = ({ status, message, onValidated }) => {
     <Col lg={12}>
       <div className=" newsletter-bx wow slideInUp  ">
         <h2 className="mb-5 text-center">Contact</h2>
-        <div className="d-flex justify-content-evenly ">
+        <div className="d-flex justify-content-evenly flex-wrap gap-4">
           <div>
-            <EnvelopeFill size={36} />
-            <span className="email"> nabilallouche49@gmail.com</span>
+            <a href="mailto:nabilallouche49@gmail.com" className="email d-flex">
+              <EnvelopeFill size={36} /> <span>nabilallouche49@gmail.com</span>
+            </a>
           </div>
           <div>
-            <a href="" _blank>
+            <a href="https://github.com/NabilAllouche" target="_blank">
               <Github size={36} color="black" />
             </a>{" "}
-            <a href="" _blank>
-              <Linkedin size={36} />
+            <a
+              href="https://www.linkedin.com/in/nabil-allouche/"
+              target="_blank"
+            >
+              <Linkedin size={36} color="black" />
             </a>{" "}
             <Button
-              className="btn btn-outline-dark text-white border-0"
+              className="btn btn-black btn-outline-dark text-white border-0"
               onClick={onButtonClick}
             >
               Download resume

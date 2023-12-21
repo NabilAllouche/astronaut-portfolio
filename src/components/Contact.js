@@ -60,11 +60,12 @@ export const Contact = () => {
               {({ isVisible }) => (
                 <div>
                   <h2>Get In Touch</h2>
-                  <form onSubmit={handleSubmit}>
+                  <form action="https://formspree.io/f/mjvnbedz" method="POST">
                     <Row>
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="text"
+                          name="firstName"
                           value={formDetails.firstName}
                           placeholder="First Name"
                           onChange={(e) =>
@@ -75,6 +76,7 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="text"
+                          name="lastName"
                           value={formDetails.lasttName}
                           placeholder="Last Name"
                           onChange={(e) =>
@@ -85,6 +87,7 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="email"
+                          name="email"
                           value={formDetails.email}
                           placeholder="Email Address"
                           onChange={(e) =>
@@ -95,6 +98,7 @@ export const Contact = () => {
                       <Col size={12} sm={6} className="px-1">
                         <input
                           type="tel"
+                          name="phone"
                           value={formDetails.phone}
                           placeholder="Phone No."
                           onChange={(e) =>
@@ -105,6 +109,7 @@ export const Contact = () => {
                       <Col size={12} className="px-1">
                         <textarea
                           rows="6"
+                          name="message"
                           value={formDetails.message}
                           placeholder="Message"
                           onChange={(e) =>

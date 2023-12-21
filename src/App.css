@@ -611,7 +611,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .email {
   color:#000;
-  font-size: 25px;
+  font-size: 23px;
+  text-decoration: none;
+}
+
+.email:hover{
+  color: #121212;
+  text-decoration: underline;
 }
 
 /************ Footer Css ************/
