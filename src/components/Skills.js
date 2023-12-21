@@ -1,6 +1,3 @@
-import meter1 from "../assets/img/meter1.svg";
-import meter2 from "../assets/img/meter2.svg";
-import meter3 from "../assets/img/meter3.svg";
 import nodejs from "../assets/img/nodejs-logo.png";
 import react from "../assets/img/React-icon.svg.png";
 import express from "../assets/img/express-logo.png";
@@ -15,8 +12,6 @@ import git from "../assets/img/Git-logo.png";
 
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import arrow1 from "../assets/img/arrow1.svg";
-import arrow2 from "../assets/img/arrow2.svg";
 import colorSharp from "../assets/img/color-sharp.png";
 
 export const Skills = () => {
@@ -58,19 +53,19 @@ export const Skills = () => {
                 className="owl-carousel owl-theme skill-slider"
               >
                 <div className="item">
-                  <img src={javascript} alt="Image" />
+                  <img src={javascript} alt="skill" />
                   <h5>JavaScript</h5>
                 </div>
                 <div className="item">
-                  <img src={typescript} alt="Image" />
+                  <img src={typescript} alt="skill" />
                   <h5>Typescript</h5>
                 </div>
                 <div className="item">
-                  <img src={mongodb} alt="Image" />
+                  <img src={mongodb} alt="skill" />
                   <h5>MongoDb</h5>
                 </div>
                 <div className="item">
-                  <img src={express} alt="Image" />
+                  <img src={express} alt="skill" />
                   <h5>Express Js</h5>
                 </div>
                 <div className="item">
@@ -83,24 +78,24 @@ export const Skills = () => {
                 </div>
 
                 <div className="item">
-                  <img src={redux} alt="Image" />
+                  <img src={redux} alt="skill" />
                   <h5>Redux</h5>
                 </div>
                 <div className="item">
-                  <img src={java} alt="Image" />
+                  <img src={java} alt="skill" />
                   <h5>Java</h5>
                 </div>
                 <div className="item">
-                  <img src={spring} alt="Image" />
+                  <img src={spring} alt="skill" />
                   <h5>Spring Boot</h5>
                 </div>
 
                 <div className="item">
-                  <img src={angular} alt="Image" />
+                  <img src={angular} alt="skill" />
                   <h5>Angular</h5>
                 </div>
                 <div className="item">
-                  <img src={git} alt="Image" />
+                  <img src={git} alt="skill" />
                   <h5>Git</h5>
                 </div>
               </Carousel>
@@ -108,7 +103,7 @@ export const Skills = () => {
           </div>
         </div>
       </div>
-      <img className="background-image-left" src={colorSharp} alt="Image" />
+      <img className="background-image-left" src={colorSharp} alt="skill" />
     </section>
   );
 };
