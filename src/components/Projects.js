@@ -93,11 +93,6 @@ export const Projects = () => {
                           <div className="col-md-5 d-flex flex-column gap-3">
                             <div className="d-flex justify-content-between">
                               <h4>Fonctionnalities : </h4>
-
-                              <a href="#projects" className="project-link">
-                                {" "}
-                                Live Demo <ArrowUpRightCircleFill />
-                              </a>
                             </div>
                             <span>
                               <AwardFill color="#168bf7" /> Secure Customer
@@ -188,11 +183,6 @@ export const Projects = () => {
                           <div className="col-md-5 d-flex flex-column gap-3">
                             <div className="d-flex justify-content-between">
                               <h4>Fonctionnalities : </h4>
-
-                              <a href="#projects" className="project-link">
-                                {" "}
-                                Live Demo <ArrowUpRightCircleFill />
-                              </a>
                             </div>
                             <span>
                               <AwardFill color="#168bf7" /> Secure User

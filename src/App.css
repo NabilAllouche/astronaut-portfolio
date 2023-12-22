@@ -86,8 +86,12 @@ p.danger {
 .logo { 
   color: #fff;
   font-size: 30px;
+  text-decoration: none;
 }
-
+.footer .logo:hover{
+  color: #fff;
+  text-shadow: 1px #000;
+} 
 nav.navbar {
   padding: 10px 0;
   position: fixed;
@@ -626,7 +630,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Projects Css ************/
 .contact {
   background: linear-gradient(90.21deg, #0a0909 -5.91%, #7764f8 111.58%);
-  padding: 60px 0 200px 0;
+  padding: 60px
 }
 .contact img {
   width: 92%;
@@ -687,23 +691,24 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 
 .email {
-  color:#000;
+  margin-top: 20px;
+  color:#ffffff;
   font-size: 23px;
   text-decoration: none;
 }
 
 .email:hover{
-  color: #121212;
+  color: white;
   text-decoration: underline;
 }
 
 /************ Footer Css ************/
 .footer {
-  padding: 0 0 50px 0;
-  background-image: url('./assets/img/footer-bg.png');
+  padding: 50px;
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  padding-bottom: 70px;
 }
 .newsletter-bx {
   background: #FFFFFF;
@@ -765,9 +770,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   border-radius: 18px;
 }
-.footer{
+/* .footer{
   background-image: url('./assets/img/stars.png');
-}
+} */
 .footer img {
   width: 26%;
 }
