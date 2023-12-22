@@ -32,24 +32,21 @@ export const Projects = () => {
 
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
                   <Nav
-                    variant="tabs"
-                    className="w-100 nav-pills mb-5 justify-content-center align-items-center flex-column flex-md-row"
+                    variant="pills"
+                    className="nav-pills mb-5 justify-content-center align-items-center"
                     id="pills-tab"
                   >
-                    <Nav.Item className="nav-item">
-                      <Nav.Link eventKey="first" className="">
-                        E-commerce Store
-                      </Nav.Link>
+                    <Nav.Item>
+                      <Nav.Link eventKey="first">Store</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">
-                        E-commerce Back-Office
-                      </Nav.Link>
+                      <Nav.Link eventKey="second">Back-office</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Blog App</Nav.Link>
+                      <Nav.Link eventKey="third">Blog app</Nav.Link>
                     </Nav.Item>
                   </Nav>
+
                   <Tab.Content id="slideInUp">
                     <Tab.Pane eventKey="first">
                       <div className="container">

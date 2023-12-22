@@ -86,7 +86,6 @@ p.danger {
 .logo { 
   color: #fff;
   font-size: 30px;
-   font-family: cursive;
 }
 
 nav.navbar {
@@ -112,9 +111,9 @@ background: rgba(255, 255, 255, 0.19);
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(7.7px);
 -webkit-backdrop-filter: blur(3.7px);
-border: 1px solid rgba(255, 255, 255, 0.3);
+border-radius: 8px;
 margin: 10px;
-}
+box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;}
 
 nav.navbar.scrolled {
   padding: 0px 0;
@@ -179,8 +178,7 @@ span.navbar-text {
 .navbar-text button {
   font-weight: 700;
   color: #000000;
-  border: 1px solid #f8f8f8;
-  border-radius: 0px;
+  border-radius: 8px;
   padding: 10px;
   background: #f8f8f8;
   font-size: 18px;
@@ -299,13 +297,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
+  text-decoration: none;
+
 }
+.banner button a {
+  text-decoration: none;
+ color: #f8f8f8;
+}
+
 .banner button svg {
   font-size: 25px;
   margin-left: 10px;
   transition: 0.3s ease-in-out;
   line-height: 1;
 }
+
 .banner button:hover svg {
   margin-left: 25px;
 }
@@ -328,29 +334,110 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 60px;
 }
 
+/************ About Css ************/
+.skill .about-bx p {
+  color: #B8B8B8;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 75px 0;
+  text-align: start;
+}
+
+@media (max-width:1200px) {
+	.skill p .about-bx {
+    width: 60%;
+   
+  }
+}
+@media (max-width:496px) {
+	.skill p .about-bx {
+    width: 100%;
+   
+  }
+}
+
+
+.skill p button{
+  color: white;
+ 
+}
+.about-bx {
+  background: #000000;
+  border-radius: 40px;
+  text-align: center;
+  padding: 20px;
+  padding-top: 40px;
+  margin-top: -70px;
+  margin-bottom: 10px;
+  width: 100%;
+
+}
+
+.about-bx .about-award{
+  text-align: start;
+
+}
+
+.shape {
+  background-image:url(./assets/img/profile-image.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  animation: morph 4s ease-in-out infinite;
+   border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+   height: 250px;
+   transition: all 1s ease-in-out;
+   width: 250px;
+   z-index: 5;
+   margin-right: 20px;
+  }
+  
+  @keyframes morph {
+   0% {
+             border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+     } 
+     
+     50% {
+             border-radius:  30% 60% 70% 40% / 50% 60% 30% 60%;
+     }
+   
+     100% {
+         border-radius:  60% 40% 30% 70% / 60% 30% 70% 40%;
+     } 
+  }
+
+
+
 /************ Skills Css ************/
 .skill {
   padding: 0 0 50px 0;
   position: relative;
+  background-image: url("./assets/img/stars.png");
+  background-color: #2e0631;
 }
 .skill-bx {
-  background: #151515;
-  border-radius: 64px;
+  background: #000000c4;
+  border-radius: 40px;
   text-align: center;
   padding: 60px 50px;
   margin-top: -60px;
+
 }
+
 .skill h2 {
 	font-size: 45px;
 	font-weight: 700;
 }
-.skill p {
-    color: #B8B8B8;
-    font-size: 20px;
-    letter-spacing: 0.8px;
-    line-height: 1.5em;
-    margin: 14px 0 75px 0;
+
+.skill-bx p{
+  color: #B8B8B8;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 75px 0;
+  text-align: center;
 }
+
 .skill-slider {
   width: 80%;
   margin: 0 auto;
@@ -434,10 +521,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 56%;
 }
 .project .nav.nav-pills {
-  width: 72%;
+  width: 100%;
   margin: 0 auto;
+  border-radius: 50px;
   background-color: rgb(255 255 255 / 10%);
   overflow: hidden;
+  box-shadow: rgba(91, 90, 90, 0.469) 0px 5px 15px;
+
 }
 .project .nav.nav-pills .nav-item {
   width: 33.33333%;
@@ -461,7 +551,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     position: absolute;
     width: 0;
     height: 100%;
-    background: linear-gradient(90.21deg, #e1d016 -5.91%, #ff9028 111.58%);
+    background: linear-gradient(90.21deg, #AA367C -5.91%, #4A2FBD 111.58%);
     top: 0;
     left: 0;
     z-index: -1;
@@ -470,18 +560,15 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .project .nav.nav-pills .nav-link.active::before {
     width: 100% !important;
 }
-.project .nav.nav-pills .nav-link.active {
-    border: 1px solid rgba(255, 255, 255, 1);
-}
-.nav-link#projects-tabs-tab-first {
-  border: 1px solid rgba(255, 255, 255, 0.5);
-}
-.nav-link#projects-tabs-tab-second {
-  border: 1px solid rgba(255, 255, 255, 0.5);
 
+.nav-link#projects-tabs-tab-first {
+  border-right: 1px solid rgb(133, 133, 133);
+  border-radius: 55px 0px 0px 55px;
 }
 .nav-link#projects-tabs-tab-third {
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 0 55px 55px 0;
+  border-left: 1px solid rgb(133, 133, 133);
+
 }
 .proj-imgbx {
   position: relative;
@@ -677,6 +764,9 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-weight: 500;
   letter-spacing: 0.5px;
   border-radius: 18px;
+}
+.footer{
+  background-image: url('./assets/img/stars.png');
 }
 .footer img {
   width: 26%;

@@ -68,26 +68,20 @@ export const Banner = () => {
                     <span className="wrap">{text}</span>
                   </span>
                 </h1>
-                <p>
-                  Passionate about web development, I master front-end and
-                  back-end technologies to create innovative web applications,
-                  and I am always ready to tackle new technical challenges.
-                </p>
-                <a href="#connect" style={{ textDecoration: "none" }}>
-                  <button onClick={() => console.log("connect")}>
+
+                <button onClick={() => console.log("connect")}>
+                  <a href="#connect" style={{ textDecoration: "none" }}>
                     Let’s Connect <ArrowRightCircle size={25} />
-                  </button>
-                </a>
+                  </a>
+                </button>
               </div>
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
-              {({ isVisible }) => (
-                <div>
-                  <img src={headerImg} alt="Header Img" />
-                </div>
-              )}
+              <div>
+                <img src={headerImg} alt="Header Img" />
+              </div>
             </TrackVisibility>
           </Col>
         </Row>
