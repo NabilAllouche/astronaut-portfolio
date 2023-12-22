@@ -15,7 +15,7 @@ import registre from "../assets/img/projects/registre.png";
 import featured from "../assets/img/projects/featured1.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
-import { AwardFill, ArrowUpRightCircleFill } from "react-bootstrap-icons";
+import { AwardFill } from "react-bootstrap-icons";
 
 import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-bootstrap/Carousel";
