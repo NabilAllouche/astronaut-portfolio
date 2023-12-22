@@ -12,10 +12,14 @@ export const Footer = () => {
             <a href="#home" className="logo">
               Nabil.Dev
             </a>
-            <div className="mt-4">
-              <a href="mailto: nabilallouche49@gmail.com" className="email">
+            <div className="mt-4 w-75">
+              <a
+                href="mailto: nabilallouche49@gmail.com"
+                className="email d-flex gap-4 justify-content-center mb-3"
+              >
                 {" "}
-                <EnvelopeCheckFill size={30} /> nabilallouche49@gmail.com{" "}
+                <EnvelopeCheckFill size={30} />{" "}
+                <span>nabilallouche49@gmail.com</span>{" "}
               </a>
             </div>
           </Col>

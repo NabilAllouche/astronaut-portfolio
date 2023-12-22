@@ -263,7 +263,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0;
   padding: 260px 0 100px 0;
-  background-image: url('./assets/img/universe-with-a-blue-and-violet-comet-high-detail-ultra-hd-realistic-vivid-colors-highly-detail-311137229.png');
+  background-image: url('./assets/img/banner-background.png');
   background-position: top center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -467,6 +467,16 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-radius: 20px;
   border: 1 solid;
 }
+
+@media (max-width:769px) {
+  .carousel-projects{
+        margin-bottom: 50px;
+   
+  }
+}
+
+
+
 .carousel-projects .carousel-img{
   border-radius: 10px;
   border: 1 solid;
@@ -630,7 +640,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /************ Projects Css ************/
 .contact {
   background: linear-gradient(90.21deg, #0a0909 -5.91%, #7764f8 111.58%);
-  padding: 60px
+  padding: 40px
 }
 .contact img {
   width: 92%;
@@ -644,7 +654,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.5);
-  border-radius: 20px;
+  border-radius: 8px;
   color: #fff;
   margin: 0 0 8px 0;
   padding: 18px 26px;
